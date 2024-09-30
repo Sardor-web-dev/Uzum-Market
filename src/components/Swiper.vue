@@ -12,7 +12,7 @@
   >
     <swiper-slide v-for="(itemm, index) in items" :key="index" class="relative">
       <div
-        class="pb-10 flex flex-col lg:pb-0  text-left pl-16 sm:pl-20 lg:gap-2 pt-4 lg:pt-8 lg:pl-28 text-yellow-300 bg-violet-500 h-full"
+        class="pb-10 flex flex-col lg:pb-0  text-left pl-16 sm:pl-20 lg:gap-2 pt-4 lg:pt-8 lg:pl-28 text-gray bg-violet-500 h-full"
       >
         <h2 class="font-bold text-xs lg:text-lg 2xl:text-2xl">{{ itemm.title }}</h2>
         <p class="font-medium text-sm 2xl:text-xl">{{ itemm.price }} $</p>

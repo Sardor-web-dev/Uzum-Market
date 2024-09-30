@@ -19,7 +19,7 @@
         </li>
         <li
           @click="() => emit('openDrawer')"
-          class="flex hover:text-black cursor-pointer text-gray-500 gap-1 sm:gap-2 lg:gap-4"
+          class="flex hover:text-black cursor-pointer text-violet-600 gap-1 sm:gap-2 lg:gap-4"
         >
           <img class="w-2 lg:w-5 sm:w-4" src="/public/basket.png" alt="" />
           <p class="text-xs sm:text-sm sm:font-bold lg:text-lg">
@@ -28,7 +28,7 @@
         </li>
         <router-link to="/favorites">
           <li
-            class="hover:text-black cursor-pointer text-gray-800 flex items-center gap-1"
+            class="hover:text-black cursor-pointer text-violet-600 flex items-center gap-1"
           >
             <img class="w-2 sm:w-4 lg:w-5" src="/heart.svg" alt="" />
             <span class="text-xs lg:text-sm">Избранное</span>
@@ -36,7 +36,7 @@
         </router-link>
         <li
           @click="() => !loginUser && emit('openAuthorization')"
-          class="text-gray-500 cursor-pointer flex items-center gap-1 lg:gap-2 hover:text-black"
+          class=" text-violet-600 cursor-pointer flex items-center gap-1 lg:gap-2 hover:text-black"
         >
           <img class="w-2 sm:w-4" src="/profile.svg" alt="" />
           <span class="text-xs lg:text-sm">{{
