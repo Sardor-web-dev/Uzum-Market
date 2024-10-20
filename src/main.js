@@ -1,36 +1,25 @@
-import "./assets/main.css";
-import Home from "./pages/Home.vue";
-import Favorites from "./components/Favorites.vue"; 
-import { createRouter, createWebHistory } from "vue-router"; 
-import { createApp } from "vue";
-import App from "./App.vue";
-import Swiper from "./components/Swiper.vue";
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import App from './App.vue';
 
-const app = createApp(App);
+import MainPage from './MainPage.vue';
+import AddFavorite from './components/AddFavorite.vue';
+import AddBasket from './components/AddBasket.vue';
+import Card from './components/Card.vue';
+import User from './components/User.vue';
+
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/favorites",
-    name: "Favorites",
-    component: Favorites, 
-  },
-  {
-    path: "/swiper",
-    name: "swiper",
-    component: Swiper, 
-  },
+  { path: '/', component: MainPage},
+  { path: '/favorite', component: AddFavorite, name: 'favorite' },
+  { path: '/basket', component: AddBasket, name: 'basket' },
+  { path: '/card',component: Card},
+  { path: '/user', component: User}
 ];
 
 const router = createRouter({
-  history: createWebHistory(), 
+  history: createWebHistory(),
   routes,
 });
 
-
-app.use(router);
-app.mount("#app");
+createApp(App).use(router).mount('#app');
