@@ -10,14 +10,12 @@
         <a href="/" class="home-link">На главную</a>
       </div>
      
-      <!-- Если есть избранные товары, отображаем их -->
       <div v-if="favorites.length > 0 " class="cards">
         <div v-for="product in favorites" :key="product.id" :id="'product' + product.id" class="card">
           <div class="photo">
         <router-link :to="'/card#' + product.id" style="text-decoration: none;">
           <img :src="product.thumbnail" :alt="product.title" />
         </router-link>
-     
       </div>
       <div class="details">
         <router-link :to="'/card#' + product.id" style="text-decoration: none;">
@@ -67,14 +65,14 @@ export default {
       if (this.BacketProducts.includes(productId)) {
       this.BacketProducts = this.BacketProducts.filter(id => id !== productId);
     } else {
-      // Если продукта нет в списке, добавляем его
+      
       this.BacketProducts.push(productId);
     }
 
-    // Сохраняем обновленный список в localStorage
+    
     localStorage.setItem('BacketProducts', JSON.stringify(this.BacketProducts));
 
-      // Дополнительные действия при добавлении в избранное (если необходимо)
+      
     },
     calculateDiscountedPrice(price, discountPercentage) {
       return price - (price * discountPercentage) / 100;
@@ -89,7 +87,7 @@ export default {
           this.products = data.products;
           this.products.forEach(product => {
             if (this.BacketProducts.includes(product.id)) {
-              this.favorites.push(product); // Добавляем продукт в массив favorites, если его id есть в likedProducts
+              this.favorites.push(product); 
             }
           });
         })
@@ -461,7 +459,7 @@ font-size: 12px;
 
 .ui-link svg, .ui-button svg {
 fill: #8B8E99;
-margin-bottom: 5px; /* Добавим отступ между иконкой и текстом */
+margin-bottom: 5px; 
 }
 
 .active-link {
@@ -676,7 +674,7 @@ gap: 0px;
 }
 
 .custom-modal.show {
-bottom: -100px; /* Появление на 50px от нижнего края */
+bottom: -100px; 
 }
 
 .recom {

@@ -10,7 +10,7 @@ const routes = [
   ];
 
   const router = new VueRouter({
-    mode: 'history',  // Для работы с чистыми URL (без #)
+    mode: 'history',  
     routes
   });
   
